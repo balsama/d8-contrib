@@ -1,0 +1,6 @@
+name: D8 Contrib
+type: module
+description: 'A place to automate the download and testing of modules not in the Lightning Distribution.'
+core: 8.x
+dependencies:
+  - field_collection
