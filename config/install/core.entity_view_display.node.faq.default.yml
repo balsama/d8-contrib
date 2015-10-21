@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.faq.field_q_and_a
+    - node.type.faq
+  module:
+    - field_collection
+    - user
+id: node.faq.default
+targetEntityType: node
+bundle: faq
+mode: default
+content:
+  field_q_and_a:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_items
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
+

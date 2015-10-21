@@ -1,6 +1,6 @@
 @lightning @content_types
-Feature: Field Collection
-  Basic functional tests for the Field Collection module.
+Feature: Lightning Content Types
+  Makes sure that the article, basic page and landing page content types are present.
 
   @api
   Scenario: Check Article content type is present
