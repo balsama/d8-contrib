@@ -1,0 +1,47 @@
+language: php
+cache:
+  bundler: true
+  apt: true
+php:
+- 5.5
+mysql:
+  database: drupal
+  username: root
+  encoding: utf8
+sudo: false
+
+before_install:
+  - export UPDATE TRAVIS_BUILD_DIR
+  - BUILD_TOP=`dirname $TRAVIS_BUILD_DIR`
+  - EXIT_VALUE=0
+  - composer self-update
+  - composer --version
+
+install:
+  - export PATH="$HOME/.composer/vendor/bin:$PATH"
+  - composer global require drush/drush:dev-master
+  - echo 'max_execution_time = 120' >> drupal.php.ini;
+  - echo 'sendmail_path = /bin/true' >> drupal.php.ini;
+  - phpenv config-add drupal.php.ini
+  - phpenv rehash
+  - git clone https://github.com/acquia/lightning.git lightning
+  - cd lightning
+  - git checkout 8.x-1.x
+  - drush make --concurrency=5 build-lightning.make ../drupal -y
+  - cd ../drupal
+  - git clone https://github.com/balsama/d8contrib.git modules/d8contrib
+  - drush make --no-core -y modules/d8contrib/d8contrib.make
+  - php modules/composer_manager/scripts/init.php
+  - composer drupal-update commerceguys/intl commerceguys/addressing commerceguys/zone
+  - drush si lightning --db-url=mysql://root:@localhost/drupal -y
+
+
+before_script:
+  - drush runserver --default-server=builtin 8080 &>/dev/null &
+  - drush en -y d8contrib
+  - mv modules/d8contrib/d8contrib_tests d8contrib_tests
+  - cd d8contrib_tests
+  - touch behat.local.yml
+  - composer install
+  - bin/behat --tags=d8contrib
+
