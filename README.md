@@ -5,6 +5,11 @@
 
 ```
 drush make --no-core -y modules/d8contrib/d8contrib.make
+
+#install address dependencies
+php modules/composer_manager/scripts/init.php
+composer drupal-update
+
 drush en -y d8contrib
 ```
 ## Test
