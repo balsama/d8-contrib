@@ -12,7 +12,7 @@ Feature: Administrator can create address fields
     And I press "op"
     And I press "op"
     And I am on "admin/structure/types/manage/article/fields/node.article.field_myaddress"
-    And I select "United States" from "edit-settings-available-countries"
+    And I select "US" from "edit-settings-available-countries"
     And the "settings[fields][administrativeArea]" checkbox should be checked
     And the "settings[fields][locality]" checkbox should be checked
     And the "settings[fields][dependentLocality]" checkbox should be checked
