@@ -4,3 +4,5 @@ description: 'A place to automate the download and testing of modules not in the
 core: 8.x
 dependencies:
   - field_collection
+  - focal_point
+  - address
