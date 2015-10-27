@@ -4,9 +4,15 @@ use Drupal\DrupalExtension\Context\RawDrupalContext;
 use Drupal\node\Entity\Node;
 use Drupal\field_collection\Entity\FieldCollectionItem;
 use Drupal\field_collection\Entity\FieldCollection;
+use Drupal\DrupalExtension\Event\EntityEvent;
+use Drupal\Component\Utility\Random;
 use Behat\Behat\Context\SnippetAcceptingContext;
 use Behat\Gherkin\Node\PyStringNode;
 use Behat\Gherkin\Node\TableNode;
+use Behat\Behat\Context\BehatContext;
+use Behat\Behat\Context\Step;
+use Behat\Behat\Context\Step\Given;
+use Behat\Behat\Tester\Exception\PendingException;
 
 /**
  * Defines application features from the specific context.
@@ -25,6 +31,9 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
 
   /**
    * @Given I am viewing the Sample FAQ:
+   *
+   * Creates an FAQ node and associated field collection item. Used in the
+   * @field_collection scenario.
    */
   public function iAmViewingTheSampleFaq() {
 
@@ -51,6 +60,19 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
     $faq->save();
 
     $this->getSession()->visit($this->locatePath('/node/' . $faq->id()));
+  }
+
+  /**
+   * @Then /^I should see the css selector "([^"]*)"$/
+   * @Then /^I should see the CSS selector "([^"]*)"$/
+   *
+   * Used in the @focal_point scenario
+   */
+  public function iShouldSeeTheCssSelector($css_selector) {
+    $element = $this->getSession()->getPage()->find("css", $css_selector);
+    if (empty($element)) {
+      throw new \Exception(sprintf("The page '%s' does not contain the css selector '%s'", $this->getSession()->getCurrentUrl(), $css_selector));
+    }
   }
 
 }
