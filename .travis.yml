@@ -43,5 +43,7 @@ before_script:
   - cd d8contrib_tests
   - touch behat.local.yml
   - composer install
-  - bin/behat --tags=d8contrib
+
+script:
+  - bin/behat --tags=d8contribute
 
