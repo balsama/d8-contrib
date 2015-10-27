@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/balsama/d8contrib.svg?branch=8.x-1.x)](https://travis-ci.org/balsama/d8contrib)
+
 ## Install
 
 1. Download this module and place it in your modules directory
