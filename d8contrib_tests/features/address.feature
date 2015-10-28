@@ -1,18 +1,20 @@
-@api @d8contrib @address
+@d8contrib @address
 Feature: Administrator can create address fields
   An Administrator should be able to create an address field.
 
+@api
   Scenario: Administrators can create address fields on a Article node type
     Given I am logged in as a user with the "Administrator" role
     When I visit "/admin/structure/types/manage/article/fields"
     And I click "Add field"
     And I should see the CSS selector "select"
     And I select "Address" from "new_storage_type"
+    And I press "op"
     And I fill in "label" with "myaddress"
+    And I fill in "field_name" with "myaddress"
     And I press "op"
     And I press "op"
-    And I am on "admin/structure/types/manage/article/fields/node.article.field_myaddress"
-    And I select "United States" from "edit-settings-available-countries"
+    And I select "United States" from "settings[available_countries][]"
     And the "settings[fields][administrativeArea]" checkbox should be checked
     And the "settings[fields][locality]" checkbox should be checked
     And the "settings[fields][dependentLocality]" checkbox should be checked
@@ -22,7 +24,7 @@ Feature: Administrator can create address fields
     And the "settings[fields][addressLine2]" checkbox should be checked
     And the "settings[fields][organization]" checkbox should be checked
     And the "settings[fields][recipient]" checkbox should be checked
-    And I press "edit-submit"
+    And I press "op"
 
 @api
   Scenario: Administrators can input an address on a Article node type
