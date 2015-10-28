@@ -1,5 +1,13 @@
 [![Build Status](https://travis-ci.org/balsama/d8contrib.svg?branch=8.x-1.x)](https://travis-ci.org/balsama/d8contrib)
 
+## Coverage
+Currently, this module has feature test coverage for the following modules:
+* Address
+* Field Collection
+* Focus Point
+
+See the `d8contrib.make` file for exact versions or commit hashes tested.
+
 ## Install
 
 1. Download this module and place it in your modules directory
@@ -16,8 +24,10 @@ drush en -y d8contrib
 ```
 ## Test
 1. Move the `d8contrib_tests` directory into docroot.
-2. From within the moved `d8contrib_tests` directory, run `composer install`.
-3. Execute the test scenarios tagged as d8contrib:
+2. Copy the `behat.local.example.yml` file to `behat.local.yml` and update
+   `BASE_PATH` to match your installation.
+3. From within the moved `d8contrib_tests` directory, run `composer install`.
+4. Execute the test scenarios tagged as d8contrib:
 
 ```
 bin/behat --tags=d8contrib --profile=dev
