@@ -18,17 +18,29 @@ above for the latest build results.
 ## Coverage
 Currently, this module has feature test coverage for the following modules:
 
-**Passing**  
+### Passing
 * Address
 * Field Collection
 * Focus Point
 * Embed
 
-**Need work**  
+### Need work (tests not included)
 * Entity Embed
 * Entity Browser
 
-See the `d8contrib.make` file for exact versions or commit hashes tested.
+**Entity Embed Active Bugs**  
+* Embed button does not work (2596487) - Active
+* Prevent the same field formatter from showing up multiple times (2350493) - Active
+* <drupal-entity>is not replaced when twig debugging is enabled (2541984) - Active
+* <drupal-entity> tag not being automatically added when an Entity Embed button is added to active editor toolbar (2554687) - Active
+* Manual embed should not get an option to Edit Entity (2544018) - Active
+
+**Entity Browser Active Bugs**  
+* Modal display assumes single-step workflow (2403331)
+* Clicking "Save" on an Entity Browser saves the Entity Browser entity (2600708)
+* $instance_uuid not passed to RegisterJSCallbacks::__construct() in built in Displays (2600706)
+
+See the `d8contrib.make` file for exact versions or commit hashes tested against.
 
 ## Install
 
