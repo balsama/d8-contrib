@@ -1,4 +1,19 @@
-[![Build Status](https://travis-ci.org/balsama/d8contrib.svg?branch=8.x-1.x)](https://travis-ci.org/balsama/d8contrib)
+## Current Build
+[![Build Status](https://travis-ci.org/balsama/d8contrib.svg?branch=8.x-1.x)](https://travis-ci.org/balsama/d8contrib)  
+[See it on Travis](https://travis-ci.org/balsama/d8contrib)
+
+## Background
+The purpose of this module is to gather resources and test the readiness of
+critical Drupal 8 contrib modules as identified by our internal D8 DC Tracker.
+
+It should be installed on top of Lightning. Modules to be tested that are *not*
+included as part of Lightning are automatically pulled in via this module's make
+file. See the contained make file for the specific versions/commits that are
+used.
+
+Functional tests are included for each module. See the #tests section below for
+instructions on how to run the tests locally, or reference the Travis.ci status
+above for the latest build results.
 
 ## Coverage
 Currently, this module has feature test coverage for the following modules:
