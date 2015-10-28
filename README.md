@@ -17,9 +17,16 @@ above for the latest build results.
 
 ## Coverage
 Currently, this module has feature test coverage for the following modules:
+
+**Passing**  
 * Address
 * Field Collection
 * Focus Point
+* Embed
+
+**Need work**  
+* Entity Embed
+* Entity Browser
 
 See the `d8contrib.make` file for exact versions or commit hashes tested.
 
@@ -33,7 +40,7 @@ drush make --no-core -y modules/d8contrib/d8contrib.make
 
 #install address dependencies
 php modules/composer_manager/scripts/init.php
-composer drupal-update
+composer drupal-update commerceguys/intl commerceguys/addressing commerceguys/zone
 
 drush en -y d8contrib
 ```
