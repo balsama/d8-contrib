@@ -45,5 +45,5 @@ before_script:
   - composer install
 
 script:
-  - bin/behat --tags=d8contribute
+  - bin/behat --tags=d8contrib
 
