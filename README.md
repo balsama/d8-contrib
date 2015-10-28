@@ -28,6 +28,13 @@ Currently, this module has feature test coverage for the following modules:
 * Entity Embed
 * Entity Browser
 
+### Roadmap (next month)
+* Configuration Update Manager
+* Metatag
+* Entity Print
+* Calendar
+* Views data export
+
 **Entity Embed Active Bugs**  
 * Embed button does not work (2596487) - Active
 * Prevent the same field formatter from showing up multiple times (2350493) - Active
