@@ -27,7 +27,7 @@ install:
   - git clone https://github.com/acquia/lightning.git lightning
   - cd lightning
   - git checkout 8.x-1.x
-  - drush make --concurrency=5 build-lightning.make ../drupal -y
+  - drush make --concurrency=5 build-lightning.make.yml ../drupal -y
   - cd ../drupal
   - git clone https://github.com/balsama/d8contrib.git modules/d8contrib
   - drush make --no-core -y modules/d8contrib/d8contrib.make
