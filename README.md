@@ -21,15 +21,15 @@ Currently, this module has feature test coverage for the following modules:
 ### Passing
 * Address
 * Field Collection
-* Focus Point
+* Focal Point
 * Embed
+* Configuration Update Manager
 
 ### Need work (tests not included)
 * Entity Embed
 * Entity Browser
 
 ### Roadmap (next month)
-* Configuration Update Manager
 * Metatag
 * Entity Print
 * Calendar
