@@ -6,3 +6,6 @@ dependencies:
   - field_collection
   - focal_point
   - address
+  - config_update
+  - config_update_ui
+

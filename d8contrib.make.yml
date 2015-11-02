@@ -1,0 +1,31 @@
+; D8 Contrib Makefile
+
+api: 2
+core: 8.x
+
+projects:
+  field_collection:
+    type: module
+    download:
+      type: git
+      revision: b9a86c680ea66c76426a1126e72b4c1f4a0a2f79
+      branch: 8.x-1.x
+  address:
+    type: module
+    version: 1.0-beta1
+  composer_manager:
+    type: module
+    version: 1.0-rc1
+  focal_point:
+    type: module
+    download:
+      type: git
+      revision: 99fd1d807342a911f07efd4825eb82ceef463e1d
+      branch: 8.x-1.x
+  config_update:
+    type: module
+    download:
+      type: git
+      revision: e56ff9c0ed66884b1fadaa0929d81c72fa61c617
+      branch: 8.x-1.x
+

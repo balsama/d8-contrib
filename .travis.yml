@@ -30,7 +30,7 @@ install:
   - drush make --concurrency=5 build-lightning.make.yml ../drupal -y
   - cd ../drupal
   - git clone https://github.com/balsama/d8contrib.git modules/d8contrib
-  - drush make --no-core -y modules/d8contrib/d8contrib.make
+  - drush make --no-core -y modules/d8contrib/d8contrib.make.yml
   - php modules/composer_manager/scripts/init.php
   - composer drupal-update commerceguys/intl commerceguys/addressing commerceguys/zone
   - drush si lightning --db-url=mysql://root:@localhost/drupal -y
