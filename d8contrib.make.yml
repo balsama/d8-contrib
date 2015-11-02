@@ -1,4 +1,4 @@
-; D8 Contrib Makefile
+# D8 Contrib Makefile
 
 api: 2
 core: 8.x
