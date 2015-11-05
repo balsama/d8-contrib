@@ -32,14 +32,18 @@ install:
   - git clone https://github.com/balsama/d8contrib.git modules/d8contrib
   - drush make --no-core -y modules/d8contrib/d8contrib.make.yml
   - php modules/composer_manager/scripts/init.php
-  - composer drupal-update commerceguys/intl commerceguys/addressing commerceguys/zone cebe/markdown
+  - composer drupal-update commerceguys/intl commerceguys/addressing commerceguys/zone
   - drush si lightning --db-url=mysql://root:@localhost/drupal -y
 
 before_script:
   - drush runserver --default-server=builtin 8080 &>/dev/null &
   - drush en -y d8contrib
+  - composer drupal-update cebe/markdown
+  - pwd
   - cd modules/d8contrib
+  - pwd
   - composer install
+  - pwd
   - cd tests
   - touch behat.local.yml
 
