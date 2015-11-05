@@ -19,7 +19,7 @@ default:
       drush:
         alias: self
       drupal:
-        drupal_root: "../"
+        drupal_root: "../../../"
 imports:
   - behat.local.yml
 
