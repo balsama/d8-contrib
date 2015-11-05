@@ -41,8 +41,10 @@ before_script:
   - composer drupal-update cebe/markdown
   - cd modules/d8contrib
   - composer install
-  - cd tests
+  - cd ../../
+  - mv modules/d8contrib/d8contrib_tests d8contrib_tests
+  - cd d8contrib_tests
   - touch behat.local.yml
 
 script:
-  - ../vendor/bin/behat --tags=d8contrib
+  - bin/behat --tags=d8contrib
