@@ -38,10 +38,10 @@ install:
 before_script:
   - drush runserver --default-server=builtin 8080 &>/dev/null &
   - drush en -y d8contrib
-  - mv modules/d8contrib/d8contrib_tests d8contrib_tests
-  - cd d8contrib_tests
-  - touch behat.local.yml
+  - cd modules/d8contrib
   - composer install
+  - cd tests
+  - touch behat.local.yml
 
 script:
-  - bin/behat --tags=d8contrib
+  - ../bin/behat --tags=d8contrib
