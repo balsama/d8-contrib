@@ -40,10 +40,13 @@ before_script:
   - drush en -y d8contrib
   - composer drupal-update cebe/markdown
   - pwd
+  - ls
   - cd modules/d8contrib
   - pwd
+  - ls
   - composer install
   - pwd
+  - ls
   - cd tests
   - touch behat.local.yml
 
