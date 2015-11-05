@@ -4,6 +4,7 @@
     },
     "require-dev": {
         "drupal/drupal-extension": "^3.1",
-        "guzzlehttp/guzzle": "^6.1"
+        "guzzlehttp/guzzle": "^6.1",
+        "se/selenium-server-standalone": "~2.46"
     }
 }
