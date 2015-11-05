@@ -7,6 +7,7 @@
 
 namespace Drupal\d8contrib\Controller;
 
+use cebe\markdown\GithubMarkdown;
 use Drupal\Core\Controller\ControllerBase;
 
 class FrontController extends ControllerBase {
@@ -17,8 +18,9 @@ class FrontController extends ControllerBase {
    * @todo Run this through a Markdown filter so it actually looks correct.
    */
   public function readMe() {
+    $raw_text = file_get_contents($this->moduleHandler()->getModule('d8contrib')->getPath() . '/README.md');
     return array(
-      '#markup' => file_get_contents($this->moduleHandler()->getModule('d8contrib')->getPath() . '/README.md'),
+      '#markup' => (new GithubMarkdown())->parse($raw_text),
     );
   }
 

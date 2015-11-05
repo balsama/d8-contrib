@@ -7,4 +7,7 @@
   front page if d8contrib is installed.
     Given I am an anonymous user
     When I visit "/"
-    Then I should see "The purpose of this module is to gather resources and test the readiness of critical Drupal 8 contrib modules as identified by our internal D8 DC Tracker."
+    Then the response should contain "<h2>Background</h2>"
+    And the response should contain "<h2>Coverage</h2>"
+    And the response should contain "<h2>Install</h2>"
+    And the response should contain "<h2>Test</h2>"
