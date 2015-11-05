@@ -1,5 +1,9 @@
 {
     "require": {
         "cebe/markdown": "^1.1"
+    },
+    "require-dev": {
+        "drupal/drupal-extension": "^3.1",
+        "guzzlehttp/guzzle": "^6.1"
     }
 }
