@@ -38,7 +38,6 @@ install:
 before_script:
   - drush runserver --default-server=builtin 8080 &>/dev/null &
   - drush en -y d8contrib
-  - composer drupal-update cebe/markdown
   - cd modules/d8contrib
   - composer install
   - cd ../../
