@@ -28,7 +28,4 @@ projects:
       type: git
       revision: e56ff9c0ed66884b1fadaa0929d81c72fa61c617
       branch: 8.x-1.x
-  entity_print:
-    type: module
-    version: 1.0-rc1
 
