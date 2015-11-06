@@ -8,4 +8,5 @@ dependencies:
   - address
   - config_update
   - config_update_ui
+  - entity_print
 
