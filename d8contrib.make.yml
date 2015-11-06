@@ -12,6 +12,7 @@ projects:
       branch: 8.x-1.x
     patch:
       2608404: https://www.drupal.org/files/issues/2608404-fc-6.patch
+      2597089: https://www.drupal.org/files/issues/field_collection-checkAccess-fix.patch
   address:
     type: module
     version: 1.0-beta1
