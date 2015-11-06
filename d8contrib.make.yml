@@ -10,6 +10,8 @@ projects:
       type: git
       revision: b9a86c680ea66c76426a1126e72b4c1f4a0a2f79
       branch: 8.x-1.x
+    patch:
+      2608404: https://www.drupal.org/files/issues/import-dup-2608404-3--test-and-fix.patch
   address:
     type: module
     version: 1.0-beta1
