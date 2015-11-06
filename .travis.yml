@@ -45,4 +45,5 @@ before_script:
   - composer install
 
 script:
+  - bin/selenium-server-standalone -port 4445
   - bin/behat --tags=d8contrib
