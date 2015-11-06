@@ -9,8 +9,11 @@ default:
         - Drupal\DrupalExtension\Context\DrushContext
   extensions:
     Behat\MinkExtension:
+      javascript_session: selenium2
       goutte: ~
-      selenium2: ~
+      selenium2:
+        wd_host: http://127.0.0.1:4444/wd/hub
+        browser: firefox
       base_url: "http://127.0.0.1:8080"
       files_path: "%paths.base%/media"
     Drupal\DrupalExtension:
@@ -22,4 +25,3 @@ default:
         drupal_root: "../"
 imports:
   - behat.local.yml
-
