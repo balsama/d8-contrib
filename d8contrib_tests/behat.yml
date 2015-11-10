@@ -19,6 +19,9 @@ default:
     Drupal\DrupalExtension:
       api_driver: "drupal"
       blackbox: ~
+      region_map:
+        content: ".region-content"
+        highlighted: ".region-highlighted"
       drush:
         alias: self
       drupal:
