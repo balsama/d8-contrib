@@ -58,7 +58,7 @@ drush en -y d8contrib
 2. Copy the `behat.local.example.yml` file to `behat.local.yml` and update
    `BASE_PATH` to match your installation.
 3. From within the moved `d8contrib_tests` directory, run `composer install`.
-4. Run `bin/selenium-server-standalone -port 4445` to start selenium 
+4. Run `bin/selenium-server-standalone -port 4444 &` to start selenium 
 5. Execute the test scenarios tagged as d8contrib:
 
 ```
