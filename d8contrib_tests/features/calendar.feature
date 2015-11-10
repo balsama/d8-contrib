@@ -1,9 +1,7 @@
 @d8contrib @calendar
 Feature: Calendar
-  When the address module enabled
-  An Administrator should be able to create an address field
-  on an article content type
-
+  When the calendar module enabled
+  An Administrator should be able to create simple calendar view
 Background:
   Given I am logged in as a user with the "Administrator" role
 
