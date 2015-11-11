@@ -11,8 +11,14 @@ projects:
       revision: b9a86c680ea66c76426a1126e72b4c1f4a0a2f79
       branch: 8.x-1.x
     patch:
+      # When importing field_collections from config,
+      # field_collection_field_storage_config_insert() tries to duplicate the
+      # collection
       2608404: https://www.drupal.org/files/issues/2608404-fc-6.patch
+      # Remove $langcode from function signature in checkAccess()
       2597089: https://www.drupal.org/files/issues/field_collection-checkAccess-fix.patch
+      # AJAX error prevents removal of collection items
+      2597842: https://www.drupal.org/files/issues/ajax-error-on-remove--2597842-5.patch
   address:
     type: module
     version: 1.0-beta1
