@@ -1,10 +1,10 @@
 {
   "require": {
     "drupal/drupal-extension": "~3.0",
-    "guzzlehttp/guzzle" : "^6.0@dev"
+    "guzzlehttp/guzzle" : "^6.0@dev",
+    "se/selenium-server-standalone": "~2.46"
 },
   "config": {
     "bin-dir": "bin/"
   }
 }
-
