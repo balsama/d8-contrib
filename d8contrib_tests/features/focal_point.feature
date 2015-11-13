@@ -1,4 +1,4 @@
-@api @d8contrib @focal_point @javascript
+@api @d8contrib @focal_point
 Feature: Focal Point
   Administrators with the ability to upload images should be able to select a focal point on an uploaded image.
 
@@ -9,4 +9,3 @@ Feature: Focal Point
     And I attach the file "drupal8.png" to "files[field_image_0]"
     And I wait for AJAX to finish
     Then I should see the CSS selector ".focal-point-indicator"
-
