@@ -29,6 +29,37 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
   public function __construct() {
   }
 
+
+  /**
+   * @Then /^I should get a "([^"]*)" HTTP response$/
+   */
+  public function iShouldGetAHttpResponse($arg1) {
+    return $this->getSession()->getStatusCode($arg1);
+  }
+
+  /**
+   *
+   * @When /^(?:|I )click the element with CSS selector "([^"]*)"$/
+   * @When /^(?:|I )click the element with css selector "([^"]*)"$/
+   */
+  public function iClickTheElementWithCssSelector($css_selector) {
+    $element = $this->getSession()->getPage()->find("css", $css_selector);
+    if (empty($element)) {
+      throw new \Exception(sprintf("The page '%s' does not contain the css selector '%s'", $this->getSession()->getCurrentUrl(), $css_selector));
+    }
+    $element->click();
+  }
+
+  /**
+   * @Given /^I wait (\d+) seconds$/
+   * @Given /^I wait for (\d+) seconds$/
+   */
+  public function iWaitSeconds($seconds) {
+    sleep($seconds);
+  }
+
+
+
   /**
    * @Given I am viewing the Sample FAQ:
    *
