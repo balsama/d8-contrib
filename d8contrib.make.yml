@@ -8,7 +8,7 @@ projects:
     type: module
     download:
       type: git
-      revision: 7df28d8cc2299153ba765a61b50874b1c65514b9
+      revision: e9843581ab917260899c51b9e5bf9e6363c47f1a
       branch: 8.x-1.x
   address:
     type: module
