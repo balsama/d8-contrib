@@ -32,10 +32,26 @@ Currently, this module has feature test coverage for the following modules:
 ### Need work (tests not included)
 * Entity Print
 
-### Roadmap (next month)
+### Roadmap
+
+#### 11/18
+* Views configuration from blocks
+
+#### 12/7
 * Metatag
 * Calendar
 * Views data export
+
+#### 1/25
+* Services
+* SimpleSAMLphp Authentication
+* Webform
+* Workflow states
+* Autologout
+
+#### 2/16
+* Panels
+* Panelizer
 
 See the `d8contrib.make` file for exact versions or commit hashes tested against.
 
@@ -58,7 +74,7 @@ drush en -y d8contrib
 2. Copy the `behat.local.example.yml` file to `behat.local.yml` and update
    `BASE_PATH` to match your installation.
 3. From within the moved `d8contrib_tests` directory, run `composer install`.
-4. Run `bin/selenium-server-standalone -port 4444 &` to start selenium 
+4. Run `bin/selenium-server-standalone -port 4444 &` to start selenium
 5. Execute the test scenarios tagged as d8contrib:
 
 ```
