@@ -22,7 +22,7 @@ Scenario: An Administrator can add a metatag field to an article node type
 @api
 Scenario: As an Administrator I should be able to add default metatag values
   And I am on "admin/structure/types/manage/article/fields/node.article.field_meta_tags"
-  And I press "Meta tags"
+  And I click "Meta tags"
   And I fill in "default_value_input[field_meta_tags][0][basic][title]" with "a lightning title"
   And I fill in "default_value_input[field_meta_tags][0][basic][description]" with "a lightning description"
   And I fill in "default_value_input[field_meta_tags][0][basic][keywords]" with "a lightning keyword"
@@ -33,7 +33,7 @@ Scenario: As an Administrator I should be able to add default metatag values
 @api
 Scenario: An Administrator should see the metatags default values when creating a node
   When I am on "node/add/article"
-  And I press "Meta tags"
+  And I click "Meta tags"
   Then the "field_meta_tags[0][basic][title]" field should contain "a lightning title"
   And the "field_meta_tags[0][basic][description]" field should contain "a lightning description"
   And the "field_meta_tags[0][basic][keywords]" field should contain "a lightning keyword"
@@ -43,10 +43,9 @@ Scenario: An Administrator should see the metatags default values when creating 
 Scenario: An Administrator should be able to change the default metatag values on node creation
   When I am on "node/add/article"
   And I fill in "title[0][value]" with "test"
-  And I press "Meta tags"
+  And I click "Meta tags"
   And I fill in "field_meta_tags[0][basic][title]" with "a custom lightning title"
   And I fill in "field_meta_tags[0][basic][description]" with "a custom lightning description"
   And I fill in "field_meta_tags[0][basic][keywords]" with "a custom lightning keyword"
   And I fill in "field_meta_tags[0][basic][abstract]" with "a custom lightning abstract"
   And I press "op"
-
