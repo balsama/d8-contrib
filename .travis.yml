@@ -42,7 +42,7 @@ before_script:
   - mv modules/d8contrib/d8contrib_tests d8contrib_tests
   - cd d8contrib_tests
   - touch behat.local.yml
-  - composer require se/selenium-server-standalone
+  - composer require joomla-projects/selenium-server-standalone
   - composer install
 
 script:
