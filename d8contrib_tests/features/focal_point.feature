@@ -1,4 +1,4 @@
-@api @d8contrib @focal_point
+@api @d8contrib @focal_point @javascript
 Feature: Focal Point
   Administrators with the ability to upload images should be able to select a focal point on an uploaded image.
 
