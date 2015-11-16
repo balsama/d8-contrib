@@ -42,9 +42,14 @@ before_script:
   - mv modules/d8contrib/d8contrib_tests d8contrib_tests
   - cd d8contrib_tests
   - touch behat.local.yml
-  - composer require joomla-projects/selenium-server-standalone
+  # - composer require joomla-projects/selenium-server-standalone
+  - "sh -e /etc/init.d/xvfb start"
+  - "export DISPLAY=:99.0"
+  - "wget http://selenium-release.storage.googleapis.com/2.48/selenium-server-standalone-2.48.1.jar"
+  - "java -jar selenium-server-standalone-2.48.1.jar > /dev/null &"
+  - sleep 5
   - composer install
 
 script:
-  - bin/selenium-server-standalone -port 4444 &
+  # - bin/selenium-server-standalone -port 4444 &
   - bin/behat --tags=d8contrib
