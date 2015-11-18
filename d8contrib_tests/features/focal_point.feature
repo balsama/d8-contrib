@@ -9,4 +9,3 @@ Feature: Focal Point
     And I attach the file "drupal8.png" to "files[field_image_0]"
     And I wait for AJAX to finish
     Then I should see the CSS selector ".focal-point-indicator"
-
