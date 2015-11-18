@@ -1,6 +1,6 @@
-@api @d8contrib @entity_print
-  Feature: Entity Print
-  An Administrator should be able to configure entity print
+#@api @d8contrib @entity_print
+#  Feature: Entity Print
+#  An Administrator should be able to configure entity print
 
 #   Background:
 #     Given I am logged in as a user with the "Administrator" role
