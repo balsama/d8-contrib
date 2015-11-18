@@ -7,7 +7,6 @@
   front page if d8contrib is installed.
     Given I am an anonymous user
     When I visit "/"
-    Then the response should contain "<h2>Background</h2>"
-    And the response should contain "<h2>Coverage</h2>"
-    And the response should contain "<h2>Install</h2>"
-    And the response should contain "<h2>Test</h2>"
+    Then the response should contain "<h2>Current Build</h2>"
+    And the response should contain "<h2>Background</h2>"
+

@@ -8,5 +8,10 @@ dependencies:
   - address
   - config_update
   - config_update_ui
+  - features
+  - features_ui
   - entity_print
+  - services
+  - entity_browser
+  - acquia_connector
 

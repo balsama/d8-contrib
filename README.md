@@ -15,22 +15,19 @@ Functional tests are included for each module. See the #tests section below for
 instructions on how to run the tests locally, or reference the Travis.ci status
 above for the latest build results.
 
-## Coverage
-Currently, this module has feature test coverage for the following modules:
-
-### Passing
+### Stable
 * Address
-* Field Collection
 * Focal Point
 * Embed
+* Features
 * Configuration Update Manager
-
-## Limited coverage
+* Services
 * Entity Embed
 * Entity Browser
-
-### Need work (tests not included)
 * Entity Print
+
+### Needs Work
+* Field Collection
 
 ### Roadmap
 
@@ -40,12 +37,11 @@ Currently, this module has feature test coverage for the following modules:
 #### 12/7
 * Metatag
 * Calendar
-* Views data export
+* Views data export (equivilent functionality)
 
 #### 1/25
-* Services
 * SimpleSAMLphp Authentication
-* Webform
+* Webform (Equivilent functionality)
 * Workflow states
 * Autologout
 

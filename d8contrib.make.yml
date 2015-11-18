@@ -28,7 +28,19 @@ projects:
       type: git
       revision: e56ff9c0ed66884b1fadaa0929d81c72fa61c617
       branch: 8.x-1.x
+  features:
+    type: module
+    version: 3.0-alpha4
   entity_print:
     type: module
     version: 1.0-rc1
+  services:
+    type: module
+    version: 4.0-alpha1
+  entity_browser:
+    type: module
+    download:
+      type: git
+      revision: ade9311e795be8c47efc87ae23d835b7564ed2c4
+      branch: 8.x-1.x
 
