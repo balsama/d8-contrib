@@ -51,5 +51,5 @@ projects:
       branch: 8.x-1.x
   views_rest_feed:
     type: module
-   version: 1.0-alpha1
+    version: 1.0-alpha1
 
