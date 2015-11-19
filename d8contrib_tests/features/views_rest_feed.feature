@@ -7,7 +7,9 @@
   Scenario: As an administrator, I should be able to add a REST Export Feed
   display to a view.
     Given I am logged in as a user with the "Administrator" role
-    And I visit "admin/structure/views/view/content/edit/rest_export_attachment_1"
+    And I visit "admin/structure/views/view/content"
+    And I press "edit-displays-top-add-display-rest-export-attachment"
+    Then I should be on "admin/structure/views/view/content/edit/rest_export_attachment_1"
     And I visit "admin/structure/views/nojs/display/content/rest_export_attachment_1/style_options"
     And I select "csv" from "style_options[formats][csv]"
     And I press "edit-submit-views-ui-edit-display-form"
