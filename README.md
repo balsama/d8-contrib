@@ -25,6 +25,8 @@ above for the latest build results.
 * Entity Embed
 * Entity Browser
 * Entity Print
+* Views data export (equivilent functionality)
+* Acquia Connector
 
 ### Needs Work
 * Field Collection
@@ -37,7 +39,6 @@ above for the latest build results.
 #### 12/7
 * Metatag
 * Calendar
-* Views data export (equivilent functionality)
 
 #### 1/25
 * SimpleSAMLphp Authentication
@@ -59,9 +60,9 @@ See the `d8contrib.make` file for exact versions or commit hashes tested against
 ```
 drush make --no-core -y modules/d8contrib/d8contrib.make.yml
 
-#install address dependencies
+#install dependencies
 php modules/composer_manager/scripts/init.php
-composer drupal-update commerceguys/intl commerceguys/addressing commerceguys/zone mikehaertl/phpwkhtmltopdf
+composer drupal-update commerceguys/intl commerceguys/addressing commerceguys/zone mikehaertl/phpwkhtmltopdf league/csv
 
 drush en -y d8contrib
 ```

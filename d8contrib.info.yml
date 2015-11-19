@@ -14,4 +14,6 @@ dependencies:
   - services
   - entity_browser
   - acquia_connector
+  - views_rest_feed
+  - csv_serialization
 

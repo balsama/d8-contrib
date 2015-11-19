@@ -43,4 +43,13 @@ projects:
       type: git
       revision: ade9311e795be8c47efc87ae23d835b7564ed2c4
       branch: 8.x-1.x
+  csv_serialization:
+    type: module
+    download:
+      type: git
+      revision: 7e1e459cfa19ed82fc50273b802f7d3be36d4c04
+      branch: 8.x-1.x
+  views_rest_feed:
+    type: module
+   version: 1.0-alpha1
 
