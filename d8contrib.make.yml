@@ -56,3 +56,24 @@ projects:
     type: module
     version: 1.0-beta1
 
+  # Calendar and requirements
+  # You'll need the following core patch if you want views arguments to support
+  # timezones:
+  # https://www.drupal.org/files/issues/datetime_views-2627512-11.patch
+  calendar:
+    type: module
+    download:
+      type: git
+      revision: 6218d660971e5aabbb00ae730bb88be15fd53b40
+      branch: 8.x-1.x
+  views_templates:
+    version: 1.0-alpha1
+    subdir: contrib
+  calendar_demo:
+    type: module
+    subdir: custom
+    download:
+      type: git
+      url: http://git.drupal.org/sandbox/tedbow/cal.git
+      branch: 8.x-1.x
+

@@ -17,7 +17,9 @@ dependencies:
   - views_rest_feed
   - csv_serialization
   - autologout
+  - calendar
 
   # Custom Config
   - nir_faq
+  - calendar_demo
 
