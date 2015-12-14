@@ -16,4 +16,8 @@ dependencies:
   - acquia_connector
   - views_rest_feed
   - csv_serialization
+  - autologout
+
+  # Custom Config
+  - nir_faq
 

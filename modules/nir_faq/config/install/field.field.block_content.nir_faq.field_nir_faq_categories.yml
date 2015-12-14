@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.nir_faq
+    - field.storage.block_content.field_nir_faq_categories
+  module:
+    - field_collection
+id: block_content.nir_faq.field_nir_faq_categories
+field_name: field_nir_faq_categories
+entity_type: block_content
+bundle: nir_faq
+label: Categories
+description: ''
+required: true
+translatable: false
+default_value:
+  - {  }
+  - {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_collection

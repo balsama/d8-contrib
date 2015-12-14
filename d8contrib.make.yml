@@ -52,4 +52,7 @@ projects:
   views_rest_feed:
     type: module
     version: 1.0-alpha1
+  autologout:
+    type: module
+    version: 1.0-beta1
 

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.nir_faq
+    - field.storage.block_content.field_nir_faq_display_style
+  module:
+    - options
+id: block_content.nir_faq.field_nir_faq_display_style
+field_name: field_nir_faq_display_style
+entity_type: block_content
+bundle: nir_faq
+label: 'Display style'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: list
+default_value_callback: ''
+settings: {  }
+field_type: list_string

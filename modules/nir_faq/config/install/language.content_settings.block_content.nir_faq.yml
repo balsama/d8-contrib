@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.nir_faq
+id: block_content.nir_faq
+target_entity_type_id: block_content
+target_bundle: nir_faq
+default_langcode: site_default
+language_alterable: false

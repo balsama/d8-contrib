@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.nir_faq
+    - field.field.block_content.nir_faq.field_nir_faq_categories
+    - field.field.block_content.nir_faq.field_nir_faq_display_style
+  module:
+    - field_collection
+id: block_content.nir_faq.default
+targetEntityType: block_content
+bundle: nir_faq
+mode: default
+content:
+  field_nir_faq_categories:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_embed
+  field_nir_faq_display_style:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+  info:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
