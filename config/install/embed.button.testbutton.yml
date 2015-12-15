@@ -1,9 +1,7 @@
-uuid: bbbd3f36-cb7f-4417-ad55-85a2527edc6b
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.article
     - node.type.page
   module:
     - entity_embed
@@ -14,7 +12,6 @@ type_id: entity
 type_settings:
   entity_type: node
   bundles:
-    - article
     - page
   display_plugins:
     - 'entity_reference:entity_reference_entity_view'

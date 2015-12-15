@@ -54,7 +54,10 @@ projects:
     version: 1.0-alpha1
   autologout:
     type: module
-    version: 1.0-beta1
+    download:
+      type: git
+      revision: ac976bbb4b47a6624ffff1d4e340bee6686d696d
+      branch: 8.x-1.x
 
   # Calendar and requirements
   # You'll need the following core patch if you want views arguments to support
