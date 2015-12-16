@@ -18,11 +18,11 @@ above for the latest build results.
 ### Stable
 * Address
 * Focal Point
-* Embed
+* Embed*
 * Features
 * Configuration Update Manager
 * Services
-* Entity Embed
+* Entity Embed*
 * Entity Browser
 * Entity Print
 * Views data export (equivilent functionality)
