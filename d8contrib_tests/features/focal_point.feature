@@ -5,7 +5,7 @@ Feature: Focal Point
 @api
 Scenario: Administrators can select a focal point on an uploaded image
   Given I am logged in as a user with the "Administrator" role
-  And I visit "node/add/page"
+  And I visit "node/add/article"
   And I fill in "title[0][value]" with "mynode2"
   And I attach the file "drupal8.png" to "files[field_image_0]"
   And I wait for AJAX to finish
