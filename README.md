@@ -27,24 +27,23 @@ above for the latest build results.
 * Entity Print
 * Views data export (equivilent functionality)
 * Acquia Connector
+* Metatag*
+* Calendar
+* Autologout (patched, beta2 forthcoming)
+
+*In Lightning
 
 ### Needs Work
 * Field Collection
-
-### Roadmap
-
-#### 11/18
 * Views configuration from blocks
 
-#### 12/7
-* Metatag
-* Calendar
+### Roadmap
 
 #### 1/25
 * SimpleSAMLphp Authentication
 * Webform (Equivilent functionality)
+* Webforms in Blocks
 * Workflow states
-* Autologout
 
 #### 2/16
 * Panels

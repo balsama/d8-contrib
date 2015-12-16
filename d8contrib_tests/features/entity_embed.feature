@@ -8,7 +8,6 @@ Scenario: Administrators should see Embed entity settings when Entity is selecte
   And the "label" field should contain "testbutton"
   And the "type_id" field should contain "Entity"
   And the "type_settings[entity_type]" field should contain "node"
-  And the "type_settings[bundles][article]" checkbox should be checked
   And the "type_settings[bundles][page]" checkbox should be checked
   And the "type_settings[display_plugins][entity_reference:entity_reference_entity_view]" checkbox should be checked
   And the "type_settings[display_plugins][entity_reference:entity_reference_entity_id]" checkbox should be checked

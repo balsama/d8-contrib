@@ -5,7 +5,7 @@ Feature: Administrator can create address fields
 @api
   Scenario: Administrators can create address fields on a Article node type
     Given I am logged in as a user with the "Administrator" role
-    When I visit "/admin/structure/types/manage/article/fields"
+    When I visit "/admin/structure/types/manage/page/fields"
     And I click "Add field"
     And I should see the CSS selector "select"
     And I select "Address" from "new_storage_type"
@@ -29,7 +29,7 @@ Feature: Administrator can create address fields
 @api
   Scenario: Administrators can input an address on a Article node type
     Given I am logged in as a user with the "Administrator" role
-    And I am on "node/add/article"
+    And I am on "node/add/page"
     And I fill in "title[0][value]" with "Fenway Park"
     Then I select "United States" from "field_myaddress[0][country_code]"
     And I press "Preview"
