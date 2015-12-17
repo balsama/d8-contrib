@@ -28,14 +28,15 @@ above for the latest build results.
 * Views data export (equivilent functionality)
 * Acquia Connector
 * Metatag*
-* Calendar
-* Autologout (patched, beta2 forthcoming)
+* Calendar (requires core patch for timezone views arguments)
+* Autologout
 
 *In Lightning
 
 ### Needs Work
-* Field Collection
 * Views configuration from blocks
+* Field Collection (not sure if this still needs work - orginally reported
+  issues are all Fixed.)
 
 ### Roadmap
 
