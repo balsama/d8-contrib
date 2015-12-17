@@ -8,17 +8,8 @@ projects:
     type: module
     download:
       type: git
-      revision: e9843581ab917260899c51b9e5bf9e6363c47f1a
+      revision: 014544708416bd865371debb472290df759b0d67
       branch: 8.x-1.x
-    patch:
-      # Removing field collection item from nested field collection removes all field collection items under parent
-      2613584: https://www.drupal.org/files/issues/field_collection-remove-items-2613584-22.patch
-      # Undefined index notice in FieldCollectionEmbedWidget::validate() on field collections within field collections
-      2611814: https://www.drupal.org/files/issues/field_collection_undefined_index_2611814_6.patch
-      # Fatal error when attempting to add or delete content containing field collection field
-      2619282: https://www.drupal.org/files/issues/field_collection-delete-error-2619282-3.patch
-      # Deleting an entity with nested field collections causes EntityStorageException
-      2614434: https://www.drupal.org/files/issues/field_collection-delete-nested-error-2614434-6.patch
   address:
     type: module
     version: 1.0-beta1
@@ -29,7 +20,7 @@ projects:
     type: module
     download:
       type: git
-      revision: 99fd1d807342a911f07efd4825eb82ceef463e1d
+      revision: 3095c52246e3a45c708649d07dafe0505acb0659
       branch: 8.x-1.x
   config_update:
     type: module
@@ -39,25 +30,19 @@ projects:
       branch: 8.x-1.x
   features:
     type: module
-    version: 3.0-alpha4
+    version: 3.0-alpha5
   entity_print:
     type: module
-    version: 1.0-rc1
+    version: 1.0
   services:
     type: module
     version: 4.0-alpha1
   entity_browser:
     type: module
-    download:
-      type: git
-      revision: ade9311e795be8c47efc87ae23d835b7564ed2c4
-      branch: 8.x-1.x
+    version: 1.0-alpha1
   csv_serialization:
     type: module
-    download:
-      type: git
-      revision: 7e1e459cfa19ed82fc50273b802f7d3be36d4c04
-      branch: 8.x-1.x
+    version: 1.0-alpha1
   views_rest_feed:
     type: module
     version: 1.0-alpha1
@@ -65,7 +50,7 @@ projects:
     type: module
     download:
       type: git
-      revision: ac976bbb4b47a6624ffff1d4e340bee6686d696d
+      revision: e6b2825a491dcf95551f6fa2b0c5402cc2b2e53b
       branch: 8.x-1.x
 
   # Calendar and requirements
