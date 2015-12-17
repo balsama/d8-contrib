@@ -17,6 +17,8 @@ projects:
       2611814: https://www.drupal.org/files/issues/field_collection_undefined_index_2611814_6.patch
       # Fatal error when attempting to add or delete content containing field collection field
       2619282: https://www.drupal.org/files/issues/field_collection-delete-error-2619282-3.patch
+      # Deleting an entity with nested field collections causes EntityStorageException
+      2614434: https://www.drupal.org/files/issues/field_collection-delete-nested-error-2614434-6.patch
   address:
     type: module
     version: 1.0-beta1
