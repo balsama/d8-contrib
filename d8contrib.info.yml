@@ -19,6 +19,7 @@ dependencies:
   - autologout
   - calendar
   - comment
+  - contact_storage
 
   # Custom Config
   - d8c_faq

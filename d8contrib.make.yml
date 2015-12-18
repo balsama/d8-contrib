@@ -52,6 +52,9 @@ projects:
       type: git
       revision: e6b2825a491dcf95551f6fa2b0c5402cc2b2e53b
       branch: 8.x-1.x
+  contact_storage:
+    type: module
+    version: 1.0-beta2
 
   # Calendar and requirements
   # You'll need the following core patch if you want views arguments to support
