@@ -30,6 +30,7 @@ above for the latest build results.
 * Metatag*
 * Calendar (requires core patch for timezone views arguments)
 * Autologout
+* Webform (equivilent functionality)
 
 *In Lightning
 
