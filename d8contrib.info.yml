@@ -21,6 +21,6 @@ dependencies:
   - comment
 
   # Custom Config
-  - nir_faq
+  - d8c_faq
   - calendar_demo
 
