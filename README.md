@@ -31,13 +31,12 @@ above for the latest build results.
 * Calendar (requires core patch for timezone views arguments)
 * Autologout
 * Webform (equivilent functionality)
+* Field Collection
 
 *In Lightning
 
 ### Needs Work
 * Views configuration from blocks
-* Field Collection (not sure if this still needs work - orginally reported
-  issues are all Fixed.)
 
 ### Roadmap
 
@@ -63,7 +62,7 @@ drush make --no-core -y modules/d8contrib/d8contrib.make.yml
 
 #install dependencies
 php modules/composer_manager/scripts/init.php
-composer drupal-update commerceguys/intl commerceguys/addressing commerceguys/zone mikehaertl/phpwkhtmltopdf league/csv
+composer drupal-update commerceguys/intl commerceguys/addressing commerceguys/zone mikehaertl/phpwkhtmltopdf league/csv simplesamlphp/simplesamlphp
 
 drush en -y d8contrib
 ```
@@ -78,3 +77,4 @@ drush en -y d8contrib
 ```
 bin/behat --tags=d8contrib --profile=dev
 ```
+
