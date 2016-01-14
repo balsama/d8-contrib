@@ -32,6 +32,11 @@ above for the latest build results.
 * Autologout
 * Webform (equivilent functionality)
 * Field Collection
+* SimpleSAMLphp Auth
+* Login Tracker
+* View Builder for contact_form (webforms in blocks)
+* SimpleSAMLphp Authentication
+* Webform equivilent functionality
 
 *In Lightning
 
@@ -41,10 +46,8 @@ above for the latest build results.
 ### Roadmap
 
 #### 1/25
-* SimpleSAMLphp Authentication
-* Webform (Equivilent functionality)
-* Webforms in Blocks
 * Workflow states
+* Scheduled workflow state transitions
 
 #### 2/16
 * Panels

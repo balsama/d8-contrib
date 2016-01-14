@@ -64,6 +64,9 @@ projects:
   externalauth:
     type: module
     version: 1.0-alpha1
+  login_tracker:
+    type: module
+    version: 1.0
 
   # Calendar and requirements
   # You'll need the following core patch if you want views arguments to support

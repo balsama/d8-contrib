@@ -20,6 +20,8 @@ dependencies:
   - calendar
   - comment
   - contact_storage
+  - login_tracker
+  - simplesamlphp_auth
 
   # Custom Config
   - d8c_faq

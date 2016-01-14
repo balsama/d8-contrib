@@ -34,6 +34,8 @@ install:
   - drush make --no-core -y modules/d8contrib/d8contrib.make.yml
   - php modules/composer_manager/scripts/init.php
   - composer drupal-update commerceguys/intl commerceguys/addressing commerceguys/zone mikehaertl/phpwkhtmltopdf league/csv simplesamlphp/simplesamlphp
+  - cp -rf vendor/simplesamlphp/simplesamlphp/config-templates vendor/simplesamlphp/simplesamlphp/config
+  - cp -rf vendor/simplesamlphp/simplesamlphp/metadata-templates vendor/simplesamlphp/simplesamlphp/metadata
   - composer require cebe/markdown
   - drush si lightning --db-url=mysql://root:@localhost/drupal -y
 
