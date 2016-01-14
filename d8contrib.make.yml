@@ -15,7 +15,7 @@ projects:
       2637704: https://www.drupal.org/files/issues/nested_field-2637704-13.patch
   address:
     type: module
-    version: 1.0-beta1
+    version: 1.0-beta2
   composer_manager:
     type: module
     version: 1.0-rc1
@@ -29,7 +29,7 @@ projects:
     type: module
     download:
       type: git
-      revision: e56ff9c0ed66884b1fadaa0929d81c72fa61c617
+      revision: fdd7187a2199597a5059a4fc225e87dafaec4b14
       branch: 8.x-1.x
   features:
     type: module
@@ -39,7 +39,7 @@ projects:
     version: 1.0
   services:
     type: module
-    version: 4.0-alpha1
+    version: 4.0-alpha2
   entity_browser:
     type: module
     version: 1.0-alpha1
@@ -53,23 +53,17 @@ projects:
     type: module
     download:
       type: git
-      revision: e6b2825a491dcf95551f6fa2b0c5402cc2b2e53b
+      revision: 35131d8f49d9e43a5bddc30ee2bbdde7e93ba2b9
       branch: 8.x-1.x
   contact_storage:
     type: module
     version: 1.0-beta2
   simplesamlphp_auth:
     type: module
-    download:
-      type: git
-      revision: cf955acf421112398c5d61014379d5a1a8122516
-      branch: 8.x-3.x
+    version: 1.0-alpha1
   externalauth:
     type: module
-    download:
-      type: git
-      revision: 7d5fd4456b2028823af005230a20c4eee583e4f1
-      branch: 8.x-1.x
+    version: 1.0-alpha1
 
   # Calendar and requirements
   # You'll need the following core patch if you want views arguments to support
@@ -79,7 +73,7 @@ projects:
     type: module
     download:
       type: git
-      revision: 6218d660971e5aabbb00ae730bb88be15fd53b40
+      revision: 023d78823e573e7ae2bc3c9139c65f1fb819d570
       branch: 8.x-1.x
   views_templates:
     version: 1.0-alpha1
