@@ -8,11 +8,8 @@ projects:
     type: module
     download:
       type: git
-      revision: 014544708416bd865371debb472290df759b0d67
+      revision: 668dca3cb9427243c83e2f412e4c8997595d35e5
       branch: 8.x-1.x
-    patch:
-      # Nested field collections add blank collections
-      2637704: https://www.drupal.org/files/issues/nested_field-2637704-13.patch
   address:
     type: module
     version: 1.0-beta2
