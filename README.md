@@ -37,6 +37,11 @@ above for the latest build results.
 * View Builder for contact_form (webforms in blocks)
 * SimpleSAMLphp Authentication
 * Webform equivilent functionality
+* Workbench moderation
+* Scheduled Updates
+* Share This
+* CAPTCHA
+* ReCAPTCHA
 
 *In Lightning
 
@@ -44,10 +49,6 @@ above for the latest build results.
 * Views configuration from blocks
 
 ### Roadmap
-
-#### 1/25
-* Workflow states
-* Scheduled workflow state transitions
 
 #### 2/16
 * Panels

@@ -36,7 +36,7 @@ projects:
     version: 1.0
   services:
     type: module
-    version: 4.0-alpha2
+    version: 4.0-alpha3
   entity_browser:
     type: module
     version: 1.0-alpha1
@@ -48,22 +48,34 @@ projects:
     version: 1.0-alpha1
   autologout:
     type: module
-    download:
-      type: git
-      revision: 35131d8f49d9e43a5bddc30ee2bbdde7e93ba2b9
-      branch: 8.x-1.x
+    version: 1.0-rc1
   contact_storage:
     type: module
     version: 1.0-beta2
   simplesamlphp_auth:
     type: module
-    version: 1.0-alpha1
+    version: 3.0-alpha3
   externalauth:
     type: module
-    version: 1.0-alpha1
+    version: 1.0-alpha3
   login_tracker:
     type: module
     version: 1.0
+  workbench_moderation:
+    type: module
+    version: 1.0-alpha2
+  scheduled_updates:
+    type: module
+    version: 1.0-alpha5
+  sharethis:
+    type: module
+    version: 2.0-beta1
+  captcha:
+    type: module
+    version: 1.0-alpha0
+  recaptcha:
+    type: module
+    version: 2.0-rc1
 
   # Calendar and requirements
   # You'll need the following core patch if you want views arguments to support
@@ -73,7 +85,7 @@ projects:
     type: module
     download:
       type: git
-      revision: 023d78823e573e7ae2bc3c9139c65f1fb819d570
+      revision: ed103e5c637f8840765316993a727c339a9d1692
       branch: 8.x-1.x
   views_templates:
     version: 1.0-alpha1
@@ -83,6 +95,6 @@ projects:
     subdir: custom
     download:
       type: git
-      url: http://git.drupal.org/sandbox/tedbow/cal.git
+      url: https://git.drupal.org/sandbox/tedbow/cal.git
       branch: 8.x-1.x
 

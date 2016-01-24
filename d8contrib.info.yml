@@ -22,6 +22,11 @@ dependencies:
   - contact_storage
   - login_tracker
   - simplesamlphp_auth
+  - workbench_moderation
+  - scheduled_updates
+  - sharethis
+  - captcha
+  - recaptcha
 
   # Custom Config
   - d8c_faq
