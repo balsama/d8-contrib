@@ -27,8 +27,8 @@ dependencies:
   - sharethis
   - captcha
   - recaptcha
+  - ultimate_cron
 
   # Custom Config
   - d8c_faq
-  - calendar_demo
 

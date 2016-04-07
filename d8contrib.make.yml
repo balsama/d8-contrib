@@ -76,6 +76,24 @@ projects:
   recaptcha:
     type: module
     version: 2.0-rc1
+  ultimate_cron:
+    type: module
+    download:
+      type: git
+      revision: 6c5e66afa60f5b81e6d62c5100d1032638d1409b
+      branch: 8.x-2.x
+    patch:
+      2692781 Make global setting ui dynamic and use it: https://www.drupal.org/files/issues/global_setting_ui-2692781-19.patch
+      2695175 Port CacheLogEntry and DatabaseLogEntry to Drupal 8: https://www.drupal.org/files/issues/port_cache-2695175-9.patch
+      2665728 Port drush commands to Drupal 8: https://www.drupal.org/files/issues/port_drush_commands_to-2665728-11.patch
+      ##
+      # I can get one out of the two below to pass but:
+      # - never both
+      # - putting either in front of the rest causes some combination of the previous to fail
+      # - neither will apply after the previous three
+      #
+      #2691545 Port hook_init to EventSubscriber: https://www.drupal.org/files/issues/hook_init-2691545-9.patch
+      #2688313 Move memory protection and shutdown function into services: https://www.drupal.org/files/issues/memory_protection-2688313-10.patch
 
   # Calendar and requirements
   # You'll need the following core patch if you want views arguments to support
@@ -90,11 +108,4 @@ projects:
   views_templates:
     version: 1.0-alpha1
     subdir: contrib
-  calendar_demo:
-    type: module
-    subdir: custom
-    download:
-      type: git
-      url: https://git.drupal.org/sandbox/tedbow/cal.git
-      branch: 8.x-1.x
 
