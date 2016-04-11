@@ -69,7 +69,7 @@ projects:
     version: 1.0-alpha5
   sharethis:
     type: module
-    version: 2.0-beta1
+    version: 2.0-beta2
   captcha:
     type: module
     version: 1.0-alpha0
