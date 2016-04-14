@@ -21,7 +21,6 @@ dependencies:
   - comment
   - contact_storage
   - login_tracker
-  - simplesamlphp_auth
   - workbench_moderation
   - scheduled_updates
   - sharethis

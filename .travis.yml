@@ -27,15 +27,13 @@ install:
   - phpenv rehash
   - git clone https://github.com/acquia/lightning.git lightning
   - cd lightning
-  - git checkout 8.x-1.x
+  - git checkout 7927a1496ec131463f25a9bf1a1d668bba8a3696
   - drush make --concurrency=5 build-lightning.make ../drupal -y
   - cd ../drupal
   - git clone https://github.com/balsama/d8contrib.git modules/d8contrib
   - drush make --no-core -y modules/d8contrib/d8contrib.make.yml
   - php modules/composer_manager/scripts/init.php
   - composer drupal-update commerceguys/intl commerceguys/addressing commerceguys/zone mikehaertl/phpwkhtmltopdf league/csv simplesamlphp/simplesamlphp
-  - cp -rf vendor/simplesamlphp/simplesamlphp/config-templates vendor/simplesamlphp/simplesamlphp/config
-  - cp -rf vendor/simplesamlphp/simplesamlphp/metadata-templates vendor/simplesamlphp/simplesamlphp/metadata
   - composer require cebe/markdown
   - drush si lightning --db-url=mysql://root:@localhost/drupal -y
 
