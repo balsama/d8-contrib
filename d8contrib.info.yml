@@ -1,0 +1,30 @@
+name: D8 Contrib
+type: module
+description: 'A place to automate the download and testing of modules not in the Lightning Distribution.'
+core: 8.x
+dependencies:
+  - field_collection
+  - focal_point
+  - address
+  - config_update
+  - config_update_ui
+  - features
+  - features_ui
+  - entity_print
+  - services
+  - entity_browser
+  - acquia_connector
+  - views_rest_feed
+  - csv_serialization
+  - autologout
+  - calendar
+  - comment
+  - contact_storage
+  - login_tracker
+  - workbench_moderation
+  - scheduled_updates
+  - sharethis
+  - captcha
+  - recaptcha
+  - ultimate_cron
+
