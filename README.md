@@ -1,84 +1,40 @@
-## Current Build
-[![Build Status](https://travis-ci.org/balsama/d8contrib.svg?branch=8.x-1.x)](https://travis-ci.org/balsama/d8contrib)  
-[See it on Travis](https://travis-ci.org/balsama/d8contrib)
+This is a Composer-based installer for the [Lightning](https://www.drupal.org/project/lightning) Drupal distribution. Welcome to the future!
 
-## Background
-The purpose of this module is to gather resources and test the readiness of
-critical Drupal 8 contrib modules as identified by our internal D8 DC Tracker.
+## Get Started
+You will need the following installed:
 
-It should be installed on top of Lightning. Modules to be tested that are *not*
-included as part of Lightning are automatically pulled in via this module's make
-file. See the contained make file for the specific versions/commits that are
-used.
+* [Composer](https://getcomposer.org), obviously
+* [Node](https://nodejs.org), which includes the NPM package manager
 
-Functional tests are included for each module. See the #tests section below for
-instructions on how to run the tests locally, or reference the Travis.ci status
-above for the latest build results.
-
-### Stable
-* Address
-* Focal Point
-* Embed*
-* Features
-* Configuration Update Manager
-* Services
-* Entity Embed*
-* Entity Browser
-* Entity Print
-* Views data export (equivilent functionality)
-* Acquia Connector
-* Metatag*
-* Calendar (requires core patch for timezone views arguments)
-* Autologout
-* Webform (equivilent functionality)
-* Field Collection
-* SimpleSAMLphp Auth
-* Login Tracker
-* View Builder for contact_form (webforms in blocks)
-* SimpleSAMLphp Authentication
-* Webform equivilent functionality
-* Workbench moderation
-* Scheduled Updates
-* Share This
-* CAPTCHA
-* ReCAPTCHA
-
-*In Lightning
-
-### Needs Work
-* Views configuration from blocks
-
-### Roadmap
-
-#### 2/16
-* Panels
-* Panelizer
-
-See the `d8contrib.make` file for exact versions or commit hashes tested against.
-
-## Install
-
-1. Download this module and place it in your modules directory
-2. From docroot:
-
+When you have those, run this command:
 ```
-drush make --no-core -y modules/d8contrib/d8contrib.make.yml
-
-#install dependencies
-php modules/composer_manager/scripts/init.php
-composer drupal-update commerceguys/intl commerceguys/addressing commerceguys/zone mikehaertl/phpwkhtmltopdf league/csv simplesamlphp/simplesamlphp
-
-drush en -y d8contrib
+$ composer create-project acquia/lightning-project:^8.1.0 MY_PROJECT --no-interaction
 ```
-## Test
-1. Move the `d8contrib_tests` directory into docroot.
-2. Copy the `behat.local.example.yml` file to `behat.local.yml` and update
-   `BASE_PATH` to match your installation.
-3. From within the moved `d8contrib_tests` directory, run `composer install`.
-4. Run `bin/selenium-server-standalone -port 4444 &` to start selenium
-5. Execute the test scenarios tagged as d8contrib:
+Composer will create a new directory called MY_PROJECT containing a ```docroot``` directory with a full Lightning code base therein. You can then install it like you would any other Drupal site.
 
-```
-bin/behat --tags=d8contrib --profile=dev
-```
+## Maintenance
+```drush make```, ```drush pm-download```, ```drush pm-update``` and their ilk are the old-school way of maintaining your code base. Forget them. You're in Composer land now!
+
+Let this handy table be your guide:
+
+| Task                                            | Drush                                         | Composer                                          |
+|-------------------------------------------------|-----------------------------------------------|---------------------------------------------------|
+| Installing a contrib project (latest version)   | ```drush pm-download PROJECT```               | ```composer require drupal/PROJECT:8.*```         |
+| Installing a contrib project (specific version) | ```drush pm-download PROJECT-8.x-1.0-beta3``` | ```composer require drupal/PROJECT:8.1.0-beta3``` |
+| Updating all contrib projects and Drupal core   | ```drush pm-update```                         | ```composer update```                             |
+| Updating a single contrib project               | ```drush pm-update PROJECT```                 | ```composer update drupal/PROJECT```              |
+| Updating Drupal core                            | ```drush pm-update drupal```                  | ```composer update drupal/core```                 |
+
+Not too tricky, eh?
+
+The magic is that Composer, unlike Drush, is a *dependency manager*. If module ```foo-8.x-1.0``` depends on ```baz-8.x-3.2```, Composer will not let you update baz to ```8.x-3.3``` (or downgrade it to ```8.x-3.1```, for that matter). Drush has no concept of dependency management. If you've ever accidentally hosed a site because of dependency issues like this, you've probably already realized how valuable Composer can be.
+
+But to be clear: **you still need Drush**. Tasks such as database updates (```drush updatedb```) are still firmly in Drush's province, and it's awesome at that stuff. This installer will install a copy of Drush (local to the project) in the ```bin``` directory.
+
+**Composer is only responsible for maintaining the code base**.
+
+## Source Control
+If you peek at the ```.gitignore``` we provide, you'll see that certain directories, including all directories containing contributed projects, are excluded from source control. This might be a bit disconcerting if you're newly arrived from Planet Drush, but in a Composer-based project like this one, **you SHOULD NOT commit your installed dependencies to source control**.
+
+When you set up the project, Composer will create a file called ```composer.lock```, which is a list of which dependencies were installed, and in which versions. **Commit ```composer.lock``` to source control!** Then, when your colleagues want to spin up their own copies of the project, all they'll have to do is run ```composer install```, which will install the correct versions of everything in ```composer.lock```.
 

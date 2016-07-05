@@ -1,7 +1,0 @@
-d8contrib.readme:
-  path: '/readme'
-  defaults:
-    _title: 'Welcome to Lightning!'
-    _controller: '\Drupal\d8contrib\Controller\FrontController:readMe'
-  requirements:
-    _permission: 'access content'

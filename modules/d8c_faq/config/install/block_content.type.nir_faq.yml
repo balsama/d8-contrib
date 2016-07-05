@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: nir_faq
-label: FAQ
-revision: 1
-description: 'Use <em>FAQs</em> for collections of frequently asked questions.'
