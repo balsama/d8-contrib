@@ -1,0 +1,10 @@
+name: Login tracker
+description: Track user logins
+type: module
+# core: 8.x
+
+# Information added by Drupal.org packaging script on 2015-10-08
+version: '8.x-1.0'
+core: '8.x'
+project: 'login_tracker'
+datestamp: 1444340941
